@@ -30,4 +30,4 @@ an implementation of the LZ78 compression algorithm for file compression.
 ## NOTE : 
 
     you know who you are if you shouldn't be looking at this project ;) . Like Pontius Pilatus, I will 
-    wash my hands and rid myself of any responsibility for you.
+    wash my hands and rid myself of any responsibility for your actions.
