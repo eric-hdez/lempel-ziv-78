@@ -63,11 +63,12 @@ WordTable *wt_create(void) {
     }
         
     wt[EMPTY_CODE] = calloc(1, sizeof(Word));
-    wt[EMPTY_CODE]->syms = NULL;
-    wt[EMPTY_CODE]->len = 0;
     if (!wt[EMPTY_CODE]) {
         return NULL;
     }
+
+    wt[EMPTY_CODE]->syms = NULL;
+    wt[EMPTY_CODE]->len = 0;
 
     return wt;
 }

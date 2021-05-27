@@ -8,7 +8,7 @@
 // Constructor for a TrieNode ADT
 //
 TrieNode *trie_node_create(uint16_t code) {
-    TrieNode *n = (TrieNode *) malloc(sizeof(TrieNode));
+    TrieNode *n = malloc(sizeof(TrieNode));
     if (!n) {
         return NULL;
     }
