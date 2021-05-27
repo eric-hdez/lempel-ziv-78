@@ -93,8 +93,8 @@ int main(int argc, char **argv) {
 
     //print stats if verbose enabled
     if (verbose) {
-        double saving = 1.0 - ((float) bits_to_bytes(total_bits) / (float) total_syms);
-        fprintf(stderr, "Compressed file size: %" PRIu64 " bytes\n", bits_to_bytes(total_bits));
+        double saving = 1.0 - ((float) to_bytes(total_bits) / (float) total_syms);
+        fprintf(stderr, "Compressed file size: %" PRIu64 " bytes\n", to_bytes(total_bits));
         fprintf(stderr, "Uncompressed file size: %" PRIu64 " bytes\n", total_syms);
         fprintf(stderr, "Space saving: %.2f%%\n", saving);
     }

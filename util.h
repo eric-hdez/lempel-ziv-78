@@ -23,7 +23,7 @@ static inline uint16_t code_get_bit(uint16_t code, uint32_t bit) {
     return (code >> (bit % 16)) & 1;
 }
 
-static inline uint64_t bits_to_bytes(int bits) {
+static inline uint64_t to_bytes(uint64_t bits) {
     return !(bits % 8) ? (bits / 8) : (bits / 8) + 1;
 }
 
