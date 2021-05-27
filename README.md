@@ -9,14 +9,14 @@ an implementation of the LZ78 compression algorithm for file compression.
 
 ## running
 
-###encode : 
+### encode : 
 
     $ ./encode -i <input file> -o <output file>
         -i <input file>  : file being compressed
         -o <output file> : file to output compressed file
         -v               : verbose, optional statistics
 
-###decode :
+### decode :
 
     $ ./decode -i <input file> -o <output file>
         -i <input file>  : file being decompressed
