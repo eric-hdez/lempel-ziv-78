@@ -145,7 +145,7 @@ void write_pair(int outfile, uint16_t code, uint8_t sym, int bitlen) {
 // flushes any remaining pairs from the bit buffer
 //
 void flush_pairs(int outfile) {
-    int bytes_to_write = to_bytes(bitindex);;
+    int bytes_to_write = to_bytes(bitindex);
     write_bytes(outfile, bitbuf, bytes_to_write);
 }
 
