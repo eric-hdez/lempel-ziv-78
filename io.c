@@ -99,7 +99,10 @@ bool read_sym(int infile, uint8_t *sym) {
 
     *sym = symbuf[symindex];
     symindex = (symindex + 1) % BLOCK;
-    total_syms += 1;
+
+    if (symindex != end) {
+        total_syms += 1;
+    }
 
     return symindex == end ? false : true;
 }
@@ -145,8 +148,8 @@ void write_pair(int outfile, uint16_t code, uint8_t sym, int bitlen) {
 // flushes any remaining pairs from the bit buffer
 //
 void flush_pairs(int outfile) {
-    int bytes_to_write = to_bytes(bitindex);
-    write_bytes(outfile, bitbuf, bytes_to_write);
+    int to_write = to_bytes(bitindex);
+    write_bytes(outfile, bitbuf, to_write);
 }
 
 // buffers code and sym pairs from an input file and then outputs the code
